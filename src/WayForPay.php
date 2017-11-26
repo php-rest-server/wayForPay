@@ -148,6 +148,39 @@ class WayForPay extends BaseModule
 
 
     /**
+     * Check server sign
+     *
+     * @param array $response
+     * @return bool
+     */
+    public function checkGateResponse(array $response)
+    {
+        $config = new Param($this->getConfig());
+        $data = new Param($response);
+
+        if ($data->get('merchantAccount', '1') !== $config->get('merchantAccount', '2')) {
+            return false;
+        }
+
+        $sign = hash_hmac('md5', implode(';', [
+            $data->get('merchantAccount'),
+            $data->get('orderReference'),
+            $data->get('amount'),
+            $data->get('currency'),
+            $data->get('authCode'),
+            $data->get('cardPan'),
+            $data->get('transactionStatus'),
+            $data->get('reasonCode'),
+        ]), $config->get('secretKey', ''));
+
+        if ($sign !== $data->get('merchantSignature', '')) {
+            return false;
+        }
+        return true;
+    }
+
+
+    /**
      * Calculate signature
      *
      * @param int/string $orderReference
