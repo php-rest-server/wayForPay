@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-rest-server/core.git",
-                "reference": "03d4794571e4db465c63e3fce4901b50d2dd8162"
+                "reference": "8c20accc9ee67dc506b789298d17b33537d56e79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-rest-server/core/zipball/03d4794571e4db465c63e3fce4901b50d2dd8162",
-                "reference": "03d4794571e4db465c63e3fce4901b50d2dd8162",
+                "url": "https://api.github.com/repos/php-rest-server/core/zipball/8c20accc9ee67dc506b789298d17b33537d56e79",
+                "reference": "8c20accc9ee67dc506b789298d17b33537d56e79",
                 "shasum": ""
             },
             "type": "library",
@@ -41,7 +41,7 @@
                 "source": "https://github.com/php-rest-server/core/tree/master",
                 "issues": "https://github.com/php-rest-server/core/issues"
             },
-            "time": "2017-11-26 01:09:02"
+            "time": "2017-11-26 01:43:10"
         }
     ],
     "packages-dev": [],

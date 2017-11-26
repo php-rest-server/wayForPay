@@ -1,4 +1,4 @@
-##WayForPay payment gateway integration for PHP-REST-Server
+#WayForPay payment gateway integration for PHP-REST-Server
 
 ### Install
 add to configuration file in section modules

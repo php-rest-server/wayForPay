@@ -138,6 +138,8 @@ class WayForPay extends BaseModule
             $productCount,
             $productPrice
         );
+
+        return $postData;
     }
 
 
