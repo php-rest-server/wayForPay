@@ -38,7 +38,7 @@ class WayForPay extends BaseModule
      * @param string $dateNext
      * @param string $dateEnd
      * @param array $paymentSystems
-     * @param array $defaultPaymentSystem
+     * @param string $defaultPaymentSystem
      */
     public static function preparePurchasePostData(
         $orderReference,
@@ -61,7 +61,7 @@ class WayForPay extends BaseModule
         $dateNext = '',
         $dateEnd = '',
         array $paymentSystems = [],
-        array $defaultPaymentSystem = ''
+        $defaultPaymentSystem = ''
     )
     {
         $config = new Param(static::getConfig());
@@ -164,8 +164,6 @@ class WayForPay extends BaseModule
     )
     {
         $config = new Param(static::getConfig());
-        $secretKey = $config->get('secretKey', '');
-
         $parts = [
             $config->get('merchantAccount', ''),
             $config->get('merchantDomainName', $_SERVER['HTTP_HOST']),
@@ -174,7 +172,6 @@ class WayForPay extends BaseModule
             $amount,
             $currency,
         ];
-
         $parts = array_merge($parts, $productName, $productCount, $productPrice);
 
         return hash_hmac('md5', implode(';', $parts), $config->get('secretKey', ''));
