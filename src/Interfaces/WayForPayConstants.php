@@ -84,4 +84,24 @@ interface WayForPayConstants
     const REGULAR_MODE_HALF_YEARLY = 'halfyearly';
 
     const REGULAR_MODE_YEARLY = 'yearly';
+
+    // statuses
+
+    const STATUS_CREATED = 'Created';
+
+    const STATUS_IN_PROCESSING = 'InProcessing';
+
+    const STATUS_WAITING_AUTH_COMPLETE = 'WaitingAuthComplete';
+
+    const STATUS_APPROVED = 'Approved';
+
+    const STATUS_PENDING = 'Pending';
+
+    const STATUS_EXPIRED = 'Expired';
+
+    const STATUS_REFUNDED = 'Refunded';
+
+    const STATUS_DECLINED = 'Declined';
+
+    const STATUS_REFUND_IN_PROCESSING = 'RefundInProcessing';
 }
