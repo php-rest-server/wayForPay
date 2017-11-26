@@ -104,4 +104,10 @@ interface WayForPayConstants
     const STATUS_DECLINED = 'Declined';
 
     const STATUS_REFUND_IN_PROCESSING = 'RefundInProcessing';
+
+    // status codes
+
+    const STATUS_CODE_OK = 1100;
+
+    const STATUS_CODE_PENDING = 1134;
 }
