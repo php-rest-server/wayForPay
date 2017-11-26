@@ -40,7 +40,7 @@ class WayForPay extends BaseModule
      * @param array $paymentSystems
      * @param string $defaultPaymentSystem
      */
-    public static function preparePurchasePostData(
+    public function preparePurchasePostData(
         $orderReference,
         $orderDate,
         $amount,
@@ -64,7 +64,7 @@ class WayForPay extends BaseModule
         $defaultPaymentSystem = ''
     )
     {
-        $config = new Param(static::getConfig());
+        $config = new Param($this->getConfig());
 
         $postData = [];
 
@@ -129,7 +129,7 @@ class WayForPay extends BaseModule
             $postData['defaultPaymentSystem'] = $defaultPaymentSystem;
         }
 
-        $postData['merchantSignature'] = static::calcSignature(
+        $postData['merchantSignature'] = $this->calcSignature(
             $orderReference,
             $orderDate,
             $amount,
@@ -153,7 +153,7 @@ class WayForPay extends BaseModule
      * @param array $productPrice
      * @return string signature
      */
-    public static function calcSignature(
+    public function calcSignature(
         $orderReference,
         $orderDate,
         $amount,
@@ -163,7 +163,7 @@ class WayForPay extends BaseModule
         array $productPrice
     )
     {
-        $config = new Param(static::getConfig());
+        $config = new Param($this->getConfig());
         $parts = [
             $config->get('merchantAccount', ''),
             $config->get('merchantDomainName', $_SERVER['HTTP_HOST']),
