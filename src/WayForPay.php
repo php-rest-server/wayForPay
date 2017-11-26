@@ -176,7 +176,21 @@ class WayForPay extends BaseModule
         if ($sign !== $data->get('merchantSignature', '')) {
             return false;
         }
-        return $sign;
+        return true;
+    }
+
+
+    /**
+     * Make return sign to serviceURL response
+     * @param $orderReference
+     * @param $status
+     * @param $time
+     * @return string
+     */
+    public function makeSign($orderReference, $status, $time)
+    {
+        $config = new Param($this->getConfig());
+        return hash_hmac('md5', implode(';', [$orderReference, $status, $time]), $config->get('secretKey', ''));
     }
 
 
