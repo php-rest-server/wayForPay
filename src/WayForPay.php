@@ -85,6 +85,8 @@ class WayForPay extends BaseModule
         $postData['serviceUrl'] = $config->get('serviceUrl', '');
         $postData['orderReference'] = $orderReference;
         $postData['orderDate'] = $orderDate;
+        $postData['amount'] = $amount;
+        $postData['currency'] = $currency;
 
         if (!empty($alternativeAmount)) {
             $postData['alternativeAmount'] = $alternativeAmount;
