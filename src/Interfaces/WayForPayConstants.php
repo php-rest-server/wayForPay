@@ -25,7 +25,7 @@ interface WayForPayConstants
 
     const MERCHANT_TRANSACTION_TYPE_AUTH = 'AUTH';
 
-    const MERCHANT_TRANSACTION_TYPE_ = 'SALE';
+    const MERCHANT_TRANSACTION_TYPE_SALE = 'SALE';
 
     // languages
 
