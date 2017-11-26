@@ -39,6 +39,7 @@ class WayForPay extends BaseModule
      * @param string $dateEnd
      * @param array $paymentSystems
      * @param string $defaultPaymentSystem
+     * @return array
      */
     public function preparePurchasePostData(
         $orderReference,
@@ -83,6 +84,7 @@ class WayForPay extends BaseModule
         $postData['returnUrl'] = $config->get('returnUrl', '');
         $postData['serviceUrl'] = $config->get('serviceUrl', '');
         $postData['orderReference'] = $orderReference;
+        $postData['orderDate'] = $orderDate;
 
         if (!empty($alternativeAmount)) {
             $postData['alternativeAmount'] = $alternativeAmount;
