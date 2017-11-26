@@ -1,0 +1,28 @@
+{
+  "name": "php-rest-server/wayForPay",
+  "description": "WayForPay payment processing integration for PHP-REST-Server",
+  "type": "library",
+  "license": "BSD",
+  "authors": [
+    {
+      "name": "Artem Kaplenko",
+      "email": "art.kaplenko@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url":  "https://github.com/php-rest-server/core.git"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php-rest-server/core": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "RestCore\\WayForPay\\": "src/",
+      "RestCore\\WayForPay\\tests\\": "tests/"
+    }
+  }
+}
