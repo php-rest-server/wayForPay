@@ -176,7 +176,7 @@ class WayForPay extends BaseModule
         if ($sign !== $data->get('merchantSignature', '')) {
             return false;
         }
-        return true;
+        return $sign;
     }
 
 
