@@ -1,0 +1,55 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b8e6c4265d8400f0724f9dc26d0b0f65",
+    "packages": [
+        {
+            "name": "php-rest-server/core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-rest-server/core.git",
+                "reference": "03d4794571e4db465c63e3fce4901b50d2dd8162"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-rest-server/core/zipball/03d4794571e4db465c63e3fce4901b50d2dd8162",
+                "reference": "03d4794571e4db465c63e3fce4901b50d2dd8162",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RestCore\\": "src/",
+                    "RestCore\\tests\\": "tests/"
+                }
+            },
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Artem Kaplenko",
+                    "email": "art.kaplenko@gmail.com"
+                }
+            ],
+            "description": "Simple PHP REST server framework for online games",
+            "support": {
+                "source": "https://github.com/php-rest-server/core/tree/master",
+                "issues": "https://github.com/php-rest-server/core/issues"
+            },
+            "time": "2017-11-26 01:09:02"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
