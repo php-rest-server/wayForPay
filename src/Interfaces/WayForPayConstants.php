@@ -11,6 +11,9 @@ namespace RestCore\WayForPay\Interfaces;
  */
 interface WayForPayConstants
 {
+    // urls
+    const PAYMENT_URL = 'https://secure.wayforpay.com/pay';
+
     // merchant auth types
 
     const MERCHANT_AUTH_TYPE_SIMPLE_SIGNATURE = 'SimpleSignature';
